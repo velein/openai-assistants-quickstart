@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
-import "./globals.css";
-import Warnings from "./components/warnings";
 import { assistantId } from "./assistant-config";
+import Warnings from "./components/warnings";
+import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -17,7 +17,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         {assistantId ? children : <Warnings />}
-        <img className="logo" src="/openai.svg" alt="OpenAI Logo" />
       </body>
     </html>
   );
